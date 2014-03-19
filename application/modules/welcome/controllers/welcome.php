@@ -41,21 +41,6 @@ class Welcome extends Shop_Controller
   function index()
   {
     // this one is for a visitor changing a language first time through form
-    if ($this->input->get('lang'))
-    {
-      $lang = $this->input->get('lang');
-      // set it in session
-      // delete session in cart 
-      unset($_SESSION['cart']);
-      unset($_SESSION['totalprice']);
-      // currently session is stored in the form of english = english rather than 0 english
-      $this->session->set_userdata('lang', $lang);
-      // then load that language file
-      // for testing language in header
-      //$this->lang->load($this->langfilename, $lang);
-      // $module is name of folder
-      redirect( $this->module.'/index','refresh');
-    }
     //$webshop = $module;
     $indexpath = $this->index_path;
     // if session lang is set then pull that language contetnt

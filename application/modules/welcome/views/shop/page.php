@@ -1,18 +1,15 @@
+
+<div id="maintop">
+    <?php print displayStatus();?>
 <?php
-/*
-if(isset ($lang_id)){
-    echo "<br />lang_id: ";
-print_r ($lang_id);
+if(isset($pagecontent['content']))
+{// this if is for the installation without this it will display an error
+  echo "<div id=\"pagecont\" >";
+  $prefix="../";
+  $pagecontent = str_replace($prefix, "", $pagecontent['content']);
+  echo $pagecontent;
+  echo "</div>";
 }
-echo "<br />session lang is ";
-echo $this->session->userdata('lang');
-echo "<br />Language is ";
-print_r ($language);
-*/
-$prefix="../";
-$pagecontent = str_replace($prefix, "", $pagecontent['content']);
-echo $pagecontent;
+;?>
+</div><!-- end of #maintop -->
 
-
-
-?>

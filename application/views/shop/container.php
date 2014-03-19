@@ -94,6 +94,10 @@ if( isset($page))
   }
 }
 ?>
+  <div id="footer">
+    <?php $this->load->view($this->config->item('backendpro_template_shop') . 'footer');?>
+  </div><!-- END of FOOTER  -->
+
     </div><!--End of main-->
     <div id="left"><!--Start of leftcol -->
       <?php $this->load->view($this->config->item('backendpro_template_shop') . 'left');?>
@@ -103,9 +107,6 @@ if( isset($page))
       <?php $this->load->view($this->config->item('backendpro_template_shop') . 'right');?>
     </div><!--End of rightcol-->
   </div><!-- end of inside -->
-  <div id="footer">
-    <?php $this->load->view($this->config->item('backendpro_template_shop') . 'footer');?>
-  </div><!-- END of FOOTER  -->
 </div><!--End of wrapper-->
 <!-- sharethis buttons -->
 <?php

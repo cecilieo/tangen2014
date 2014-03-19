@@ -1,124 +1,3 @@
-/*
-menustle.css
-shop.css
-jqzoom.css
-tabs.css 
-frame.css 
- */
-
-/* menustyle.css */
-/*
-#nav{
-list-style-type:none;
-list-style-position:outside;
-position:relative;
-line-height:1.5em; 
-}
-
-#nav li a{
-display:block;
-padding:0px 6px;
-color:#fff;
-text-decoration:none;
-font-size: 12px;
-margin-bottom: 5px;
-}
-
-#navfirst {
-margin-left:21px;
-
-}
-
-#nav li a:hover{
-text-decoration: none;
-}
-
-#nav li{
-float:left;
-position:relative;
-margin-bottom:5px;
-margin-top: 12px;
-}
-
-#nav ul {
-position:absolute;
-display:none;
-width:14em;
-top:1.5em;
-}
-
-#nav li ul {
-border-top-width: 5px;
-border-top-style: solid;
-border-top-color: #146EB4;
-z-index: 100;
-}
-
-
-#nav li ul a{
-width:14em;
-height:auto;
-float:left;
-font-size:11px;
-background-color:#1D96EF;
-color:#ffffff;
-}
-
-#nav li ul a:hover{
-
-background-color:#7d82a8;
-
-}
-
-#nav li li a:hover{
-
-background-color:#53A3DF;
-
-}
-
-#nav ul ul{
-top:auto;
-
-}	
-
-#nav li ul ul {
-left:14em;
-margin:0px 0 0 10px;
-}
-
-#nav li:hover ul ul, #nav li:hover ul ul ul, #nav li:hover ul ul ul ul{
-display:none;
-}
-#nav li:hover ul, #nav li li:hover ul, #nav li li li:hover ul, #nav li li li li:hover ul{
-display:block;
-}
-
-#nav li li {
-background-color:#808080;
-border-bottom-width: 1px;
-border-bottom-style: solid;
-border-bottom-color: #999999;
-background-color:#CCD8ED;
-margin-bottom:0px;
-margin-top: 0px;
-padding:0px;
-}
-
-#nav li li a {
-margin: 0px;
-line-height:2.2em;
-
-
-}
-#nav li li a:hover{
-color:#ffffff;
-text-decoration: none;
-}
-*/
-
-/* shop.css */
-
-
 /* CSS reset */
 /*
 Copyright (c) 2008, Yahoo! Inc. All rights reserved.
@@ -170,9 +49,6 @@ body{
   text-align:center;
   padding:20px 0 0 0;
   background-color: #FFF;
-  background-image: url(../images/tangen/background-image.png);
-  background-repeat: no-repeat;
-  background-position: 50% 20px;
   line-height: 120%;
 }
 
@@ -203,7 +79,7 @@ hr { background:none; height:0px; border:0px; border-top:0px solid #ffffff; }
   text-align:left;
   font-size:11px;
   font-family:Verdana, Arial, Helvetica, sans-serif;
-  height: 125px;
+  height: 124px;
   margin: 0px auto;
   padding: 0px 5px;
   background-image: url(../images/tangen/banner_tangen_shipping.png);
@@ -224,8 +100,8 @@ hr { background:none; height:0px; border:0px; border-top:0px solid #ffffff; }
 
 #logotop {
   position: absolute;
-  left: 20px;
-  top: 23px;
+  left: 40px;
+  top: 53px;
 }
 /*
 #logobottom {
@@ -241,14 +117,18 @@ float: left;
 #header {
   position: relative;	
   z-index: 3000;
-  /*margin-bottom:10px;*/
+  border-top: 1px solid #bbb;
+  border-left: 1px solid #bbb;
+  border-right: 1px solid #bbb;/*margin-bottom:10px;*/
+  width:948px;
+  height:123px;
 }
 #header table {
   border-collapse:collapse;
 
 }
 #header img {
-  margin:0px 10px;
+  margin:0px;
 }
 #header td.headerlinks { /* mini cart */
   width:300px;
@@ -328,12 +208,18 @@ font-weight:500;
   margin-top:0px;
   padding:0 5px;
   position: relative;
-
+  background-image: url(../images/tangen/background-image.png);
+  background-repeat: repeat-y;
+  background-position: 50% 0px;
 }
 
 .inside {
   margin: 0px;
+  border-bottom: 1px solid #bbb;
+  border-left: 1px solid #bbb;
+  border-right: 1px solid #bbb; 
   padding: 0px;	
+  width:948px;
 }
 
 table, tbody, thead, tr, th, td {
@@ -491,12 +377,11 @@ table#util_nav td a:hover { color:#000; }
   line-height: 1;
   font-family: inherit;
   text-align: left;
-
 }
 
 #left {
   /* Styles */
-  width:230px;	/* Change to alter width of left column */
+  width:229px;	/* Change to alter width of left column */
 }
 
 .leftbox, .rightbox {
@@ -562,10 +447,14 @@ table#util_nav td a:hover { color:#000; }
   color: #722219;
 }
 
-/* Left categories */
+/* Left image*/
+#aeo, #universal_freight{
+  padding: 5px 0 0 40px;
+}
 
-
-
+#universal_freight{
+  margin: 30px 0 0 0;
+}
 
 /* Left currency */
 
@@ -612,16 +501,11 @@ table#util_nav td a:hover { color:#000; }
 
 /* Footer */
 #footer {
-  padding-bottom:10px;
-  text-align:left;
-  color:#454545;
+  padding:2px;
   font-size:80%;
   clear:both;
   width:100%;
-
-  padding-top: 10px;
   position: relative;
-  background-color: #aaaaaa;
 }
 
 /* Alphabet listing */
@@ -641,6 +525,26 @@ table#util_nav td a:hover { color:#000; }
 
 #footer a:hover {
   text-decoration:underline;
+}
+
+#mainfoot{
+  background-color:#1D5B93;
+  height:18px;
+  color:#fff;
+  text-align:center;
+  padding: 2px 0 0 0;
+}
+
+#copy{
+  float: left;
+  padding: 0;
+  font-size:10px;
+}
+
+#design{
+  float:right;
+  padding: 0;
+  font-size:10px;
 }
 
 /*formats the search box in header file.*/
@@ -843,23 +747,41 @@ table#util_nav td a:hover { color:#000; }
 /* Styles to be use in 6.50 */
 /* Main content area */
 #main {
-  margin: 0 0 0 230px;
+  margin: 0 0 100px 229px;
   width: 490px;
   line-height:14px;
   padding:0;
   text-align: left;
 }
+
 #main li {
   list-style-type: disc;
   list-style-position: inside;
-} 
+}
+
 #maintop {
   text-align: left;
   padding-bottom: 18px;    
+  min-height:490px;
+  background-color:#fff;
+}
+
+#main p{
+
+}
+
+#main h1{
+
+}
+
+#main h2{
 
 }
 
 
+#main h3{
+
+}
 #main table td { text-align:left; }
 #main td { font-size:100%; }
 
@@ -1090,8 +1012,7 @@ table.tbl_subproduct td {
 
 #right {
   /* Styles */
-  width:230px;	/* Change to alter width of right column */
-  background-color: #e8e8e8;	
+  width:229px;	/* Change to alter width of right column */
 }
 
 
@@ -1108,9 +1029,6 @@ table.tbl_subproduct td {
 /* sign up*/
 
 .signtop {
-  background-color:#F4A94A;
-  padding: 5px 0px 10px 5px;
-  border:1px solid #666666;
 }
 
 .gravatar{
@@ -1348,8 +1266,12 @@ table.tbl_subproduct td {
 }
 
 .paddingright {
-  padding-right: 15px;
-  text-align: right;	
+  padding: 30px 20px;
+}
+
+.paddingright p{
+  color: #004A8D;
+  font-size:12px;
 }
 
 #registerright {
@@ -2412,7 +2334,7 @@ body{
 }
 .inside {
   position:relative;
-  min-height:1400px;
+  min-height:500px;
 }
 
 .browserSafari #main{ width: 516px;} 
@@ -2420,16 +2342,13 @@ body{
 #left {
   position: absolute;
   top: 0;
-  left: 16px;
-
 }
 
 #right {
   position: absolute;
   top: 0;
-  right: 16px;
   bottom: 0;
-
+  right:0;
 }
 #frontproducttable{
 
@@ -2586,14 +2505,14 @@ language box at the top
  **************/
 #langbox{
   position: absolute;
-  left: 200px;
-  top:10px;
-  width: 400px;
+  right: 120px;
+  top:125px;
+  width: 80px;
 
 }
 
 #langbox li{
-  padding: 0 5px;
+  padding: 0 2px;
   display: inline;
 }
 
@@ -2665,7 +2584,7 @@ subscribe
 #main nav ul { padding:0; margin:0; background-color:#0081C6; }
 #main nav li { position:relative; float:left; list-style-type:none; }
 #main nav ul:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }
-#main nav li a { display:block; padding:5px 20px; border-left:1px solid #146EB4; border-right:1px solid #fff; color:#000; text-decoration:none; }
+#main nav li a { display:block; padding:5px 23px; font-size:15px; color:#fff; text-decoration:none; }
 #main nav li a:focus { outline:none; text-decoration:underline; }
 #main nav li:first-child a { border-left:none; }
 #main nav li.last a { border-right:none; }
