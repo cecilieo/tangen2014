@@ -71,20 +71,27 @@ echo form_hidden('order', $category['order']);
 
 //echo form_submit('submit',$this->lang->line('kago_add_trans'));
 echo form_close();
-/*
-echo "<pre>languages";
-print_r ($languages);
-echo "</pre>";
-
-echo "<pre>selected_lang";
-print_r ($selected_lang);
-echo "</pre>";
-
-echo "<pre>category";
-print_r ($category);
-echo "</pre>";
- *
- */
 ?>
 
 
+<?php
+$base=$this->config->item('base_url');
+$mystring = $base;
+$findme   = 'localhost';
+$pos = strpos($mystring, $findme);
+if(ENVIRONMENT=='development' OR $pos)
+{
+//echo "<pre>languages";
+//print_r ($languages);
+//echo "</pre>";
+//
+//echo "<pre>selected_lang";
+//print_r ($selected_lang);
+//echo "</pre>";
+//
+//echo "<pre>category";
+//print_r ($category);
+//echo "</pre>";
+
+}
+?>

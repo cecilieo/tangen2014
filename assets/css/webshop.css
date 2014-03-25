@@ -69,8 +69,8 @@ hr { background:none; height:0px; border:0px; border-top:0px solid #ffffff; }
   text-align:left;
   margin:0px auto;
   font-size:11px;
-  font-family:Verdana, Arial, Helvetica, sans-serif;
   background-color:#FFFFFF;
+  font-family:'Varela Round', sans-serif;
   padding: 0px;
 }
 
@@ -78,7 +78,7 @@ hr { background:none; height:0px; border:0px; border-top:0px solid #ffffff; }
   width:950px;	/* change value to adjust width */
   text-align:left;
   font-size:11px;
-  font-family:Verdana, Arial, Helvetica, sans-serif;
+  font-family:'Varela Round', sans-serif;
   height: 124px;
   margin: 0px auto;
   padding: 0px 5px;
@@ -136,7 +136,65 @@ float: left;
   vertical-align:middle;
   margin-top:15px;
   color:#999;
-  font-family:Tahoma, Arial, Helvetica, sans-serif;
+  font-family:'Varela Round', sans-serif;
+  height: 124px;
+  margin: 0px auto;
+  padding: 0px 5px;
+  background-image: url(../images/tangen/banner_tangen_shipping.png);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+/*  Header navigation   */ 
+
+#headnav {
+  /*background-color:#146EB4;
+  height: 39px;
+  width: 100%;
+  left: 0px;
+  top: 143px;
+  position: relative;*/
+}
+
+#logotop {
+  position: absolute;
+  left: 40px;
+  top: 53px;
+}
+/*
+#logobottom {
+background-color: #ffffff;
+width: 86px;
+height: 50px;
+padding-left: 6px;
+float: left;
+}
+ */
+
+/* Logo and minicart */
+#header {
+  position: relative;	
+  z-index: 3000;
+  border-top: 1px solid #bbb;
+  border-left: 1px solid #bbb;
+  border-right: 1px solid #bbb;/*margin-bottom:10px;*/
+  width:948px;
+  height:123px;
+}
+#header table {
+  border-collapse:collapse;
+
+}
+#header img {
+  margin:0px;
+}
+#header td.headerlinks { /* mini cart */
+  width:300px;
+  text-align:right;
+  vertical-align:middle;
+  margin-top:15px;
+  color:#999;
+  ont-family:Tahoma, Arial, Helvetica, sans-serif;
   font-size:90%;
   padding-right:10px;
 }
@@ -151,7 +209,6 @@ font-weight:500;
 /*formats the mini cart subtotal  in the right menu*/
 .cartsubtotalminicart{
   color: #000000;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: x-small;
   font-style: normal;
   font-weight: bold;
@@ -161,7 +218,6 @@ font-weight:500;
 /*formats the links in the minicart*/
 .cartminilinks{
   color: #333333;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: xx-small;
   font-style: normal;
   font-weight: bold;
@@ -169,7 +225,6 @@ font-weight:500;
 }
 .cartminilinks a:link{
   color: #333333;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: xx-small;
   font-style: normal;
   font-weight: normal;
@@ -177,7 +232,6 @@ font-weight:500;
 }
 .cartminilinks a:visited{
   color: #333333;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: xx-small;
   font-style: normal;
   font-weight: normal;
@@ -185,7 +239,6 @@ font-weight:500;
 }
 .cartminilinks a:hover{
   color: #FF0000;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: xx-small;
   font-style: normal;
   font-weight: normal;
@@ -193,7 +246,6 @@ font-weight:500;
 }
 .cartminilinks a:active{
   color: #333333;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: xx-small;
   font-style: normal;
   font-weight: normal;
@@ -245,7 +297,6 @@ table#horiz_nav {	/* table is generated via shopa_navigation_create.asp */
 
 table#horiz_nav td {
   text-align:left;
-  font-family:Verdana, Arial, Helvetica, sans-serif;
   padding:0px;
   line-height: 1;	
 }
@@ -343,7 +394,6 @@ table#util_nav {	/* table is generated via shopa_navigation_create.asp */
 
 table#util_nav td {
   text-align:left;
-  font-family:Verdana, Arial, Helvetica, sans-serif;
   padding:0px;
 }
 
@@ -394,7 +444,6 @@ table#util_nav td a:hover { color:#000; }
   color:#aaaaaa;
   margin:0px;
   font-size:140%;
-  font-family:Arial, Helvetica, sans-serif;
   font-weight:bold;
   text-align: center;
   padding:11px 5px 0;
@@ -501,11 +550,22 @@ table#util_nav td a:hover { color:#000; }
 
 /* Footer */
 #footer {
-  padding:2px;
-  font-size:80%;
   clear:both;
   width:100%;
   position: relative;
+  margin: 100px 0 0 0;
+}
+
+#footer #mainfoot p{
+  font-size:12px;
+  line-height:12px;
+  padding:2px 0 0 0;
+}
+
+#footer #secondfoot p{
+  font-size:10px;
+  line-height:10x;
+  padding:2px 0 0 0;
 }
 
 /* Alphabet listing */
@@ -514,7 +574,6 @@ table#util_nav td a:hover { color:#000; }
   margin-bottom:0px;
   padding:3px 10px;
   font-size:90%;
-  font-family:Arial, Helvetica, sans-serif;
 }
 
 #footer a {
@@ -528,7 +587,7 @@ table#util_nav td a:hover { color:#000; }
 }
 
 #mainfoot{
-  background-color:#1D5B93;
+  background-color:#1E5C93;
   height:18px;
   color:#fff;
   text-align:center;
@@ -563,7 +622,6 @@ table#util_nav td a:hover { color:#000; }
   border-top-style: solid;
   border-top-width: 1px;
   color: #333333;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: xx-small;
   font-style: normal;
   font-weight: normal;
@@ -592,7 +650,6 @@ table#util_nav td a:hover { color:#000; }
   border-top-style: solid;
   border-top-width: 1px;
   color: #333333;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: x-small;
   font-style: normal;
   font-weight: normal;
@@ -601,7 +658,6 @@ table#util_nav td a:hover { color:#000; }
 .txtfielddropdown{
   background-color: #FFFFFF;
   color: #333333;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: x-small;
   font-style: normal;
   font-weight: normal;
@@ -612,7 +668,6 @@ table#util_nav td a:hover { color:#000; }
 
 .submitbtn {
   color:#666666;
-  font-family: Tahoma,Arial, Helvetica, sans-serif;
   background-color: #f3f3f3;
   font-size: x-small;
   font-weight: bold;
@@ -624,7 +679,6 @@ table#util_nav td a:hover { color:#000; }
 
 /* General styles */
 .menuhdr{
-  font-family: Verdana, Arial, Helvetica, sans-serif;
   background-color : #ffffff;
   color : #000000;
   font-size : 1em;
@@ -652,7 +706,6 @@ table#util_nav td a:hover { color:#000; }
 .leftmenumain{
   background-color: #F7F7F7;
   color: #000000;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: x-small;
   font-style: normal;
   font-weight: bold;
@@ -660,7 +713,6 @@ table#util_nav td a:hover { color:#000; }
 }
 .leftmenumain a:link{
   color: #333333;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: xx-small;
   font-style: normal;
   font-weight: normal;
@@ -673,7 +725,6 @@ table#util_nav td a:hover { color:#000; }
 }
 .leftmenumain a:visited{
   color: #333333;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: xx-small;
   font-style: normal;
   font-weight: normal;
@@ -687,7 +738,6 @@ table#util_nav td a:hover { color:#000; }
 .leftmenumain a:hover{
   background-color: #EEEEEE;
   color: #333333;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: xx-small;
   font-style: normal;
   font-weight: normal;
@@ -700,7 +750,6 @@ table#util_nav td a:hover { color:#000; }
 }
 .leftmenumain a:active{
   color: #333333;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: xx-small;
   font-style: normal;
   font-weight: normal;
@@ -729,7 +778,6 @@ table#util_nav td a:hover { color:#000; }
 /*formats the header text throughout the site*/
 .txtheader{
   color: #000000;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: x-small;
   font-style: normal;
   font-weight: bold;
@@ -737,7 +785,6 @@ table#util_nav td a:hover { color:#000; }
 
 .hdrproduct{
   color: #000000;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 10px;
   font-style: normal;
   font-weight: bold;
@@ -747,40 +794,42 @@ table#util_nav td a:hover { color:#000; }
 /* Styles to be use in 6.50 */
 /* Main content area */
 #main {
-  margin: 0 0 100px 229px;
+  margin: 0 0 0 229px;
   width: 490px;
   line-height:14px;
   padding:0;
   text-align: left;
+  background-color:#fff;
 }
 
 #main li {
   list-style-type: disc;
   list-style-position: inside;
+  font-size: 16px;
 }
 
 #maintop {
   text-align: left;
-  padding-bottom: 18px;    
+  padding: 20px 50px 20px 50px;    
   min-height:490px;
   background-color:#fff;
 }
 
 #main p{
-
+  font-size:16px;
+  line-height: 20px;
 }
 
 #main h1{
 
 }
 
-#main h2{
-
-}
-
 
 #main h3{
-
+  color: #AC4E27;
+  font-size:16px;
+  margin:20px 0 0 0;
+  padding:0;
 }
 #main table td { text-align:left; }
 #main td { font-size:100%; }
@@ -811,30 +860,28 @@ div.breadcrumb a:hover {
 
 /* Main area text styles */
 #main h1 {
-  font-family: "Times New Roman", Times, serif;
-  margin:0px 0px 7px 0px;
-  color:#000000;
+  margin:0px 0px 5px;
+  color:#3D6B33;
   text-align:left;
-  font-size: 24px;
-  padding:0px;
-  line-height: 26px;
+  font-size: 25px;
+  letter-spacing: 0.3px;
+  line-height: 25px;
+  font-weight:normal;
 }
 
 #main h2 {
   text-align:left;
-  margin:0px 0px 5px;
-  font-family:Verdana, Arial, Helvetica, sans-serif;
-  font-size:13px;
-  color: #15375E;
-  font-weight: bold;
+  margin:16px 0px 5px;
+  font-size:16px;
   letter-spacing: 0.3px;
-  line-height: 17px;
+  line-height: 16px;
+  color: #AD4F27;
+  font-weight:normal;
 }
 
 #main h2.picheader { /* Heading style for headings with picture, e.g. shopcustomer.asp */
   background-position:1% 50%;
   background-repeat:no-repeat;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size:11px;
   background-color:white;
   text-align:left;
@@ -890,7 +937,6 @@ table.customerservice th {
   height:35px;
   background-position:1% 50%;
   background-repeat:no-repeat;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-weight : bold;
   color:#333;
   font-size:12px;
@@ -1022,7 +1068,6 @@ table.tbl_subproduct td {
   margin:0px;
   padding:5px 10px;
   font-size:120%;
-  font-family:Arial, Helvetica, sans-serif;
   font-weight:normal;
 }
 
@@ -1266,7 +1311,7 @@ table.tbl_subproduct td {
 }
 
 .paddingright {
-  padding: 30px 20px;
+  padding: 30px 5px 0 30px;
 }
 
 .paddingright p{
@@ -1302,11 +1347,7 @@ h1 {
 }
 
 h2 {
-  font-size: 13px;
-  font-weight: bold;
-  color: #831619;
   line-height: 21px;
-  letter-spacing: 1px;
 }
 h3 {
   font-size: 14px;
@@ -1936,7 +1977,6 @@ div.jqZoomPup {
 
 /* Skin */
 .ui-tabs-nav, .ui-tabs-panel {
-  font-family: "Trebuchet MS", Trebuchet, Verdana, Helvetica, Arial, sans-serif;
   font-size: 12px;
 }
 .ui-tabs-nav {
@@ -2324,10 +2364,6 @@ div.selected img{
 #nodrop {
   height: 120px;
 }
-body{
-  font-family:Verdana,Arial,Helvetica,sans-serif;
-
-}
 #wrapper {
   text-align:left;
 
@@ -2367,10 +2403,6 @@ body{
 #codeigniter_profiler{
 
   text-align: left;
-}
-
-#footer {
-  font-size: 95%;
 }
 
 .productlisting{
@@ -2506,7 +2538,7 @@ language box at the top
 #langbox{
   position: absolute;
   right: 120px;
-  top:125px;
+  top:124px;
   width: 80px;
 
 }
@@ -2581,16 +2613,16 @@ subscribe
 
 /* base nav styles */
 #main nav { display:block; margin:0 auto 0; /*border:1px solid #222;*/ position:relative;  font:16px Tahoma, Sans-serif; width: 490px;}
-#main nav ul { padding:0; margin:0; background-color:#0081C6; }
+#main nav ul { padding:0; margin:0; background-color:#0080C3; }
 #main nav li { position:relative; float:left; list-style-type:none; }
 #main nav ul:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }
-#main nav li a { display:block; padding:5px 23px; font-size:15px; color:#fff; text-decoration:none; }
+#main nav li a { display:block; padding:5px 14px; font-size:15px; color:#fff; text-decoration:none; }
 #main nav li a:focus { outline:none; text-decoration:underline; }
 #main nav li:first-child a { border-left:none; }
 #main nav li.last a { border-right:none; }
 #main nav a span { display:block; float:right; margin-left:5px; }
-#main nav ul ul { display:none; width:100%; position:absolute; left:0; background:#0081C6; }
-#main nav ul ul li { float:none; }
+#main nav ul ul { display:none; width:160%; position:absolute; left:0; background:#0081C6; }
+#main nav ul ul li { float:none;border-top:1px solid #fff; }
 #main nav ul ul a { padding:5px 10px; border-left:none; border-right:none; font-size:14px; }
 #main nav ul ul a:hover { background-color:#146EB4; }
 #main nav li a:hover {color:#fff; text-decoration:none;}
@@ -2607,4 +2639,9 @@ this:
 
 
 /* html5 menu fallbacks */
+
+#UFO-Widget-Container{
+  margin: 30px 0 0 40px;
+}
+
 

@@ -25,35 +25,31 @@ $findme   = 'localhost';
 $pos = strpos($mystring, $findme);
 if(ENVIRONMENT=='development' OR $pos)
 {
-//  echo "<pre>pagecontent: ";
-//  print_r($pagecontent);
-//  echo "</pre>";
+  echo "<pre>pagecontent: ";
+  print_r($pagecontent);
+  echo "</pre>";
 
-//  echo "<pre>images is: ";
-//  print_r($images);
-//  echo "</pre>";
-
-  /* echo "<pre>multilang is: "; */
-  /* print_r ($this->data['multilang']); */
-  /* echo "</pre>"; */
-  /* echo "<pre>mylanguage: "; */
-  /* print_r ($this->data['mylanguage']); */
-  /* echo "</pre>"; */
-  /* echo "<pre>lang_id: "; */
-  /* print_r ($this->data['lang_id']); */
-  /* echo "</pre>"; */
-  /* echo "<pre>language: "; */
-  /* var_dump ($this->data['language']); */
-  /* echo "</pre>"; */
-  /* echo "<pre>mylanguate1: "; */
-  /* print_r ($this->data['mylanguage1']); */
-  /* echo "</pre>"; */
-  /* echo "<pre>sessionlang: "; */
-  /* if(!empty($this->data['sessionlang'])) */
-  /* { */
-  /*   var_dump ($this->data['sessionlang']); */
-  /* } */
-  /* echo "</pre>"; */
+  echo "<pre>multilang is: ";
+  print_r ($this->data['multilang']);
+  echo "</pre>";
+  echo "<pre>mylanguage: ";
+  print_r ($this->data['mylanguage']);
+  echo "</pre>";
+  echo "<pre>lang_id: ";
+  print_r ($this->data['lang_id']);
+  echo "</pre>";
+  echo "<pre>language: ";
+  var_dump ($this->data['language']);
+  echo "</pre>";
+  echo "<pre>mylanguage1: ";
+  print_r ($this->data['mylanguage1']);
+  echo "</pre>";
+  echo "<pre>sessionlang: ";
+  if(!empty($this->data['sessionlang']))
+  {
+    var_dump ($this->data['sessionlang']);
+  }
+  echo "</pre>";
 
   /* echo "<pre>get_class is: "; */
   /* print_r($get_class); */

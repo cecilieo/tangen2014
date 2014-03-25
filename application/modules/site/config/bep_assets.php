@@ -64,7 +64,8 @@ $config['asset'][] = array('file'=>'FlashStatus.css');
 $config['asset'][] = array('file'=>'bep_icons.php','type'=>'css');
 
 // BackendPro JS
-$config['asset'][] = array('file'=>'jquery-1.7.2.min.js', 'name'=>'jquery','position'=>'header');
+$config['asset'][] = array('file'=>'jquery-1.7.2.min.js', 'name'=>'jquery172','position'=>'header');
+$config['asset'][] = array('file'=>'jquery-1.9.1.min.js', 'name' => 'jquery', 'position'=>'header');
 $config['asset'][] = array('file'=>'jquery-ui-1.8.16.custom.min.js', 'name' => 'jquery_ui', 'needs'=>'jquery');
 $config['asset'][] = array('file'=>'jquery.cookie.js', 'needs'=>'jquery');
 $config['asset'][] = array('file'=>'jquery.treeview.js', 'needs'=>'jquery.cookie');
@@ -117,9 +118,6 @@ $config['asset'][] = array('file'=>'jquery.innerfade.js', 'needs'=>'jquery');
 // browser detect js
 // $config['asset'][] = array('file'=>'browserDetect-min.js', 'needs'=>'jquery');
 
-// lightbox
-$config['asset'][] = array('file'=>'colorbox.css');
-$config['asset'][] = array('file'=>'jquery.colorbox-min.js', 'needs'=>'jquery');
 
 // TINYMCE 
 $config['asset'][] = array('file'=>'tiny_mce.js');
@@ -141,6 +139,45 @@ $config['asset'][] = array('file'=>'jmpress.min.js', 'needs'=>'jquery');
 $config['asset'][] = array('file'=>'jquery.jmslideshow.js', 'needs'=>'jmpress.min');
 $config['asset'][] = array('file'=>'jmpress_style.css');
 //$config['asset'][] = array('file'=>'normalize.css');
+
+// Image gallery
+// magnific popup
+$config['asset'][] = array('file'=>'magnific-popupcss.css');
+$config['asset'][] = array('file'=>'magnific-popupjs.js', 'needs'=>'jquery');
+$config['asset'][] = array('file'=>'magnific-popup-init.js', 'needs'=>'magnific-popupjs');
+$config['asset_group']['magnific'] = 'magnific-popupcss|magnific-popupjs|magnific-popup-init';
+
+
+// colorbox
+$config['asset'][] = array('file'=>'colorbox1.css');
+$config['asset'][] = array('file'=>'colorbox2.css');
+$config['asset'][] = array('file'=>'colorbox3.css');
+$config['asset'][] = array('file'=>'colorbox4.css');
+$config['asset'][] = array('file'=>'colorbox5.css');
+$config['asset'][] = array('file'=>'jquery.colorbox.init.js', 'needs'=>'jquery.colorbox-min');
+$config['asset'][] = array('file'=>'jquery.colorbox-min.js', 'needs'=>'jquery');
+$config['asset_group']['colorbox1'] = 'colorbox1|jquery.colorbox-min|jquery.colorbox.init';
+$config['asset_group']['colorbox2'] = 'colorbox2|jquery.colorbox-min|jquery.colorbox.init';
+$config['asset_group']['colorbox3'] = 'colorbox3|jquery.colorbox-min|jquery.colorbox.init';
+$config['asset_group']['colorbox4'] = 'colorbox4|jquery.colorbox-min|jquery.colorbox.init';
+$config['asset_group']['colorbox5'] = 'colorbox5|jquery.colorbox-min|jquery.colorbox.init';
+
+
+// Avgrund popins 
+
+
+
+// Bootstrap Image Gallery
+
+
+
+
+
+// jQuery Zoomooz
+
+
+
+
 
 // flot.js
 $config['asset'][] = array('file'=>'flot.js', 'position'=>'header');
@@ -204,6 +241,17 @@ $config['asset_group']['interfade'] = "jquery.innerfade";
 $config['asset_group']['coinslider'] = "coin-slider.min|coin-slider-styles";
 $config['asset_group']['nivoslider'] = "jquery.nivo.slider.pack|nivo-slider";
 $config['asset_group']['jmpress'] = "jmpress.min|jquery.jmslideshow|jmpress_style";
+
+// Image gallery assets
+
+
+
+
+
+
+
+
+
 // Added upto here
 
 $config['asset_group']['FORMS'] = "buttons|forms";

@@ -28,7 +28,7 @@ el.className = "";
         if ($(this).find("ul").length > 0) 
         {  
 
-            $("<span>").text("^").appendTo($(this).children(":first"));  
+//            $("<span>").text("^").appendTo($(this).children(":first"));  
 
             //show subnav on hover  
             $(this).mouseenter(function() {  

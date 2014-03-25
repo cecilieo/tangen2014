@@ -31,7 +31,7 @@ $(document).ready(function(){
   }
 
   //on submit event
-  $(".changestatus").live('click', function(event){
+  $("#tablesorter1").on('click',".changestatus", function(event){
     event.preventDefault();
     var href = $(this).attr("href");
     var id =href.substring(href.lastIndexOf("/") + 1);

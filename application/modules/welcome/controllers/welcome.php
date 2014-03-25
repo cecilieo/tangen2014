@@ -68,22 +68,22 @@ class Welcome extends Shop_Controller
     // according to your folder name.
     //$webshop = $module;
     // feature == front
-    $feature='webshop';
-    $featureimages = $this -> MProducts -> getFrontFeaturebyLang($feature,$this->lang_id);
+  //  $feature='webshop';
+  //  $featureimages = $this -> MProducts -> getFrontFeaturebyLang($feature,$this->lang_id);
     //$featureimages = $this -> MProducts -> getFrontFeature($webshop);
 
-    // load slideshow preference
-    $this->bep_assets->load_asset_group($this->preference->item('webshop_slideshow'));
+    /* // load slideshow preference */
+    /* $this->bep_assets->load_asset_group($this->preference->item('webshop_slideshow')); */
 
-    // slideshow images
-    //$catname = "Slideshow";
-    $where='status';
-    $what = 'active';
-    $slideimages = $this->MKaimonokago->getAllSimple('slideshow',$where,$what);
-    //$slideimages = $this -> MSlideshow -> getAllslideshow();
-    $data['slides'] = $slideimages;
+    /* // slideshow images */
+    /* //$catname = "Slideshow"; */
+    /* $where='status'; */
+    /* $what = 'active'; */
+    /* $slideimages = $this->MKaimonokago->getAllSimple('slideshow',$where,$what); */
+    /* //$slideimages = $this -> MSlideshow -> getAllslideshow(); */
+    /* $data['slides'] = $slideimages; */
 
-    $data['images'] = $featureimages;
+  //  $data['images'] = $featureimages;
     if($page)
     {// in order to prevent an error after installation
       $data['title'] = $page['name'];
@@ -193,15 +193,16 @@ class Welcome extends Shop_Controller
     $menu_id = $this->uri->segment(3);
     //$module='pages';
     $path = $this->MMenus->getMenuwithPage($menu_id);
-    $path = $path['path'];
-
+    $data['path'] = $path = $path['path'];
+    // for contact page
+    
     if($path==$this->index_path)
     {// for home page
       redirect('','refresh');
     }
     elseif($path =='contact_us')
     {
-      redirect($this->module.'/contact','refresh');
+      redirect($this->module.'/contact/'.$menu_id,'refresh');
     }
     elseif($path =='cart')
     {
@@ -238,6 +239,14 @@ class Welcome extends Shop_Controller
       {//$page will return empty array if there is no page
         $data['pagecontent'] = $page;
         $data['title'] = $this->preference->item('site_name')." | ".$page['name'];
+        if($path =='image-gallery')
+        {
+          $feature='gallery1';
+          $data['galleryimages'] = $this -> MProducts -> getFrontFeaturebyLang($feature,$this->lang_id);
+
+          $data['galleryname']=$this->preference->item('image_gallery');
+          $this->bep_assets->load_asset_group($this->preference->item('image_gallery'));
+        }
       }
       else
       {
@@ -255,6 +264,40 @@ class Welcome extends Shop_Controller
 
   function contact()
   {
+    // find page_uri from page id
+    $menu_id = $this->uri->segment(3);
+    //$module='pages';
+    $path = $this->MMenus->getMenuwithPage($menu_id);
+    $data['path'] = $path = $path['path'];
+
+    // if session lang is set then pull that language contetnt
+    // otherwise pull english
+    if($this->session->userdata('lang')=='english' || $this->session->userdata('lang')=='')
+    {
+      $lang_id =NULL;
+      $data['language'] ='english';
+      $page = $this->MPages->getPagePath($path);
+    }  
+    else 
+    {
+      $language = $this->session->userdata('lang');
+      // find lang id
+      $lang_id = $this->MLangs->getId($language);
+      $lang_id = $lang_id['id'];
+      $data['lang_id']=$lang_id;// delete me
+      $data['language'] = $this->session->userdata('lang'); // delete me
+      $page = $this->MPages->getPagePathLang($path,$lang_id);
+    }
+    if (!empty($page))
+    {//$page will return empty array if there is no page
+      $data['pagecontent'] = $page;
+    }
+    else
+    {
+      // if there is no page redirect
+      flashMsg('info',$this->lang->line('kago_no_translation'));
+      redirect($this->module.'/error');
+    }
     $data['question']= $this->security_question;
     $data['security_method']= $this->security_method;
     $data['title'] = $this->preference->item('site_name')." | "."Contact us";
@@ -377,12 +420,12 @@ class Welcome extends Shop_Controller
       $this->email->to($myemail);
       $this->email->subject(sprintf(lang('webshop_message_subject'),$this->preference->item('site_name')));
       $this->email->message(lang('webshop_message_sender'). ": ".
-        $name."\r\n".lang('webshop_message_sender_email').": ".
-        $email. "\r\n".lang('webshop_message_message').": " . $message);
+      $name."\r\n".lang('webshop_message_sender_email').": ".
+      $email. "\r\n".lang('webshop_message_message').": " . $message);
       $this->email->send();
       flashMsg('success', lang('webshop_message_thank_for_message'));
       // $this->session->set_flashdata('subscribe_msg', lang('webshop_message_thank_for_message'));
-      redirect($this->module.'/contact');
+      redirect($this->module.'/index');
     }
   }
 
