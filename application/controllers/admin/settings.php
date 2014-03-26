@@ -109,7 +109,9 @@ class Settings extends Admin_Controller
     // for slideshows 
     $config['field']['webshop_slideshow'] = array('type'=>'dropdown','params'=>array('options'=>array('none'=>$this->lang->line('userlib_none'),'jmpress'=>"jmpress",'interfade'=>$this->lang->line('userlib_interfade'),'cu3er'=>$this->lang->line('userlib_cu3er'),'coinslider'=>$this->lang->line('userlib_coin_slider'),'nivoslider'=>$this->lang->line('userlib_nivo_slider'))));
     $config['field']['slideshow_two'] = array('type'=>'dropdown','params'=>array('options'=>array('none'=>$this->lang->line('userlib_none'),'jmpress'=>"jmpress",'interfade'=>$this->lang->line('userlib_interfade'),'cu3er'=>$this->lang->line('userlib_cu3er'),'coinslider'=>$this->lang->line('userlib_coin_slider'),'nivoslider'=>$this->lang->line('userlib_nivo_slider'))));
-    $config['field']['image_gallery'] = array('type'=>'dropdown','params'=>array('options'=>array('none'=>$this->lang->line('userlib_none'),'colorbox1'=>"Color Box 1",'colorbox2'=>"Color Box 2",'colorbox3'=>"Color Box 3",'colorbox4'=>"Color Box 4",'colorbox5'=>"Color Box 5",'magnific'=>"Magnific Popup",'avgrund'=>"Avgrund Popins")));
+    
+    // image gallery
+    $config['field']['image_gallery'] = array('type'=>'dropdown','params'=>array('options'=>array('none'=>$this->lang->line('userlib_none'),'colorbox1'=>"Color Box 1",'colorbox2'=>"Color Box 2",'colorbox3'=>"Color Box 3",'colorbox4'=>"Color Box 4",'colorbox5'=>"Color Box 5",'magnific'=>"Magnific Popup",'bootstrap-image-gallery'=>"Bootstrap Image Gallery")));
 
     // module management
     $config['field']['calendar'] = array('type'=>'boolean');

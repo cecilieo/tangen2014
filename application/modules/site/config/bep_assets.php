@@ -162,12 +162,13 @@ $config['asset_group']['colorbox3'] = 'colorbox3|jquery.colorbox-min|jquery.colo
 $config['asset_group']['colorbox4'] = 'colorbox4|jquery.colorbox-min|jquery.colorbox.init';
 $config['asset_group']['colorbox5'] = 'colorbox5|jquery.colorbox-min|jquery.colorbox.init';
 
-
-// Avgrund popins 
-
-
-
 // Bootstrap Image Gallery
+$config['asset'][] = array('file'=>'bootstrap.min.css');
+$config['asset'][] = array('file'=>'blueimp-gallery.min.css');
+$config['asset'][] = array('file'=>'bootstrap-image-gallerycss.min.css');
+$config['asset'][] = array('file'=>'jquery.blueimp-gallery.min.js', 'needs'=>'jquery');
+$config['asset'][] = array('file'=>'bootstrap-image-gallery.min.js', 'needs'=>'jquery.blueimp-gallery.min');
+$config['asset_group']['bootstrap-image-gallery'] = 'bootstrap.min|blueimp-gallery.min|bootstrap-image-gallerycss.min|jquery.blueimp-gallery.min|bootstrap-image-gallery.min';
 
 
 

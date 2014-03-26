@@ -242,7 +242,8 @@ class Welcome extends Shop_Controller
         if($path =='image-gallery')
         {
           $feature='gallery1';
-          $data['galleryimages'] = $this -> MProducts -> getFrontFeaturebyLang($feature,$this->lang_id);
+          //$data['galleryimages'] = $this -> MProducts -> getFrontFeaturebyLang($feature,$this->lang_id);
+          $data['galleryimages'] = $this -> MProducts -> getFrontFeature($feature);
 
           $data['galleryname']=$this->preference->item('image_gallery');
           $this->bep_assets->load_asset_group($this->preference->item('image_gallery'));
