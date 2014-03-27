@@ -1,4 +1,3 @@
-
 <div id="maintop">
     <?php print displayStatus();?>
 <?php
@@ -78,4 +77,5 @@ if(ENVIRONMENT=='development' OR $pos)
 //  echo "</pre>";  
 }
 ?>
+
 
