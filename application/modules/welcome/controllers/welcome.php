@@ -194,7 +194,6 @@ class Welcome extends Shop_Controller
     //$module='pages';
     $path = $this->MMenus->getMenuwithPage($menu_id);
     $data['path'] = $path = $path['path'];
-    // for contact page
     
     if($path==$this->index_path)
     {// for home page

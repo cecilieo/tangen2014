@@ -21,7 +21,6 @@ if(isset($pagecontent['metakeyword']))
   echo $pagecontent['metakeyword'];
 }
 ?>" />
-
 <base href="<?php echo base_url();?>" />
 
 <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>

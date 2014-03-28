@@ -64,17 +64,13 @@ class MProducts extends CI_Model
 
   function getProductsByCategory($catid, $public=TRUE, $lang_id=NULL)
   {
-    // this is used in function cat($id) in the shop frontend
-    // When a product is clicked this will be used.
-    // If not $cat['parentid'] < 1
-    // $catid is given in URI, the third element
     $data = array();
     $this->db->where('category_id', id_clean($catid));
     $this->db->where('status', 'active');
-    if($public==TRUE)
-    {
-      $this->db->where('public', '1');
-    }
+    // if($public==TRUE)
+    // {
+    //  $this->db->where('public', '1');
+    //  }
 
     if(!empty($lang_id))
     {
@@ -85,7 +81,6 @@ class MProducts extends CI_Model
       $lang_id='0';
       $this->db->where('lang_id', $lang_id);
     }
-    //$this->db->order_by('name','asc');
     $this->db->order_by('product_order','asc');
     $Q = $this->db->get('omc_products');
     if ($Q->num_rows() > 0)
@@ -301,7 +296,6 @@ class MProducts extends CI_Model
     $this->db->where('status', 'active');
     $this->db->where('lang_id', $lang_id);
    // $this->db->LIMIT(9);
-   // $this->db->order_by('name','random');
     $this->db->order_by('name','asc');
     $Q = $this->db->get('omc_products');
     if ($Q->num_rows() > 0)

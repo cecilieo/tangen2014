@@ -38,7 +38,19 @@
 	echo '<a href="' . site_url(). '/'.$module.'/cart/'.$list['id']. '"><p class="addtocart">'.$this->lang->line('webshop_buy').'</p></a></div>';
   }
 
-/*
+
+?>
+</div>
+
+
+<?php
+$base=$this->config->item('base_url');
+$mystring = $base;
+$findme   = 'localhost';
+$pos = strpos($mystring, $findme);
+if(ENVIRONMENT=='development' OR $pos)
+{
+
 echo "<pre>listing is: ";
 print_r($listing);
 echo "</pre>";
@@ -48,6 +60,9 @@ echo "</pre>";
 echo "<pre>level is: ";
 print_r($level);
 echo "</pre>";
-*/  
+echo "<pre>lang_id: ";
+print_r ($this->data['lang_id']);
+echo "</pre>";
+
+}
 ?>
-</div>
