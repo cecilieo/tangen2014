@@ -9,7 +9,6 @@ class MProducts extends CI_Model
   }
 
 
-
   function getAllProducts()
   {
     // getting all the products of the same categroy.
